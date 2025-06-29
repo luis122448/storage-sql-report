@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-minio-service
+  namespace: api-sql-reports
+spec:
+  type: ClusterIP
+  selector:
+    app: my-minio
+  ports:
+    - port: 9000
+      targetPort: 9000
+      name: minio-port
+    - port: 9001
+      targetPort: 9001
+      name: minio-console-port
+  sessionAffinity: None
+  publishNotReadyAddresses: true
+  externalTrafficPolicy: Local # Optional, routes external traffic to the node where the pod is running
