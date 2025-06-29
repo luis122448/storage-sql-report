@@ -16,4 +16,3 @@ spec:
       name: minio-console-port
   sessionAffinity: None
   publishNotReadyAddresses: true
-  externalTrafficPolicy: Local # Optional, routes external traffic to the node where the pod is running

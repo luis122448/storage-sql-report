@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: api-sql-reports
+  labels:
+    name: api-sql-reports
+  annotations:
+    description: "Namespace for the MinIO object storage and related data reporting services."
