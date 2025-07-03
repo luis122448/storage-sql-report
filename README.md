@@ -112,8 +112,8 @@ Now, deploy the remaining MinIO resources. It is safe to apply them all at once.
 kubectl apply -f kubernetes/namespace.yaml
 kubectl apply -f kubernetes/secret.yaml
 kubectl apply -f kubernetes/pvc.yaml
-kubectl apply -f kubernetes/service.yml
 kubectl apply -f kubernetes/deployment.yaml
+kubectl apply -f kubernetes/service.yml
 kubectl apply -f kubernetes/ingress.yaml
 ```
 
