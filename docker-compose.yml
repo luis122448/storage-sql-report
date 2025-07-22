@@ -19,5 +19,5 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /opt/sql-report/storage/minio
+      device: /opt/sql-report/storage
       o: bind
