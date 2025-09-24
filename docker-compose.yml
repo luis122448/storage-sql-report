@@ -10,10 +10,13 @@ services:
     ports:
       - "9000:9000"
       - "9001:9001"
-    command: server /data --console-address ":9001"
+    entrypoint: /bin/sh
+    command: /usr/bin/setup-minio.sh
     restart: always
     volumes:
       - minio-data:/data
+      - ./setup-minio.sh:/usr/bin/setup-minio.sh
+      - ./lifecycle.json:/etc/minio/lifecycle.json
 
 volumes:
   minio-data:
